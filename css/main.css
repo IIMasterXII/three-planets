@@ -1,6 +1,6 @@
 @font-face {
   font-family: newFont;
-  src: url('../fonts/Futura.ttf');
+  src: url('Futura.ttf');
 }
 
 * {
