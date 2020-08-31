@@ -1,0 +1,125 @@
+@font-face {
+  font-family: newFont;
+  src: url('/fonts/Futura.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    overflow: hidden;
+    background: black;
+  }
+  
+  .scene,
+  canvas {
+    position: absolute;
+    width: 100% !important;
+    transition-duration:1s;
+  }
+
+  .letterbox-top{
+    position: absolute;
+    z-index:100;
+    left:0;
+    right:0;
+    bottom:90%;
+    top:0;
+    background: black;
+    transition-duration:1s;
+  }
+
+  .letterbox-bottom{
+    position: absolute;
+    z-index:100;
+    left:0;
+    right:0;
+    bottom:0;
+    top:90%;
+    background: black;
+    transition-duration:1s;
+  }
+
+  .title-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    transition-duration:1s;
+    transition-delay:1s;
+  }
+
+  .loading {
+    opacity:0;
+  }
+
+  .navbar-container {
+    position: absolute;
+    text-transform: uppercase;
+    font-family: newFont, sans-serif;
+    top:80%;
+    width:100%;
+  }
+
+  nav.navbar {
+    padding-top: 10px;
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+  .navbar .button{
+    width: 100px;
+    padding:5px;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: newFont, sans-serif;
+    font-size: 1.3rem;
+    letter-spacing:3px;
+    background: none;
+    border: solid 1px #ffffff;
+  }
+
+  .navbar .button:hover{
+    cursor: pointer;
+  }
+
+  .navbar .button:focus, .navbar .button:active{
+    background: none;
+    border: solid 1px #ffffff;
+    outline: none;
+  }
+
+  h1{
+      text-shadow: 3px 3px  black;
+      font-size: 5rem;
+      letter-spacing: 30px;
+  }
+
+  h2{
+      text-shadow: 2px 2px black;
+      font-size: 1.5rem;
+      letter-spacing: 12px;
+  }
+
+  @media only screen and (max-width: 750px) {
+    .letterbox-top{
+      bottom:100%;
+    }
+  
+    .letterbox-bottom{
+      top:100%;
+    }
+  }
